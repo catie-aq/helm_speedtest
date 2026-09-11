@@ -15,7 +15,7 @@ Fichier `values.yaml` :
 | Parameter | Description | Default |
 |-----------|-------------|---------|
 | `image.tag` | Version de l'image speedtest-exporter | `latest` |
-| `env.SPEEDTEST_CACHE_FOR` | Intervalle entre deux tests réels (évite de saturer la bande passante à chaque scrape) | `30m` |
+| `env.SPEEDTEST_CACHE_FOR` | Intervalle en **secondes** entre deux tests réels (évite de saturer la bande passante à chaque scrape) | `1800` |
 | `env.SPEEDTEST_SERVER` | ID du serveur Speedtest à cibler (optionnel, sinon auto) | `""` |
 | `resources.limits.cpu` | CPU max | `300m` |
 | `resources.limits.memory` | Memory max | `256Mi` |
@@ -36,7 +36,7 @@ Aucune configuration supplémentaire n'est nécessaire côté `helm_prometheus` 
 
 ## Grafana
 
-Importer le dashboard communautaire [ID 13502](https://grafana.com/grafana/dashboards/13502-speedtest-exporter/) sur la datasource Prometheus existante.
+Importer le dashboard communautaire [ID 13665](https://grafana.com/grafana/dashboards/13665-speedtest-exporter-dashboard/) sur la datasource Prometheus existante (déjà fait sur l'instance `sonu`).
 
 ## Documentation
 
