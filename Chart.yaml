@@ -1,5 +1,4 @@
 apiVersion: v2
-kind: Chart
 name: speedtest
 description: A Helm chart for deploying a Speedtest exporter as a DaemonSet on Kubernetes
 type: application
