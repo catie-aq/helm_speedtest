@@ -1,0 +1,16 @@
+# .github/workflows/deploy.yml
+name: Deploy
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deployment:
+    uses: catie-aq/generic_workflows/.github/workflows/deploy-helm.yml@main
+    with:
+      release_name: speedtest
+      namespace: sonu
+    secrets:
+      KUBECONFIG: ${{ secrets.KUBECONFIG }}

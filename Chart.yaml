@@ -1,0 +1,18 @@
+apiVersion: v2
+kind: Chart
+name: speedtest
+description: A Helm chart for deploying a Speedtest exporter as a DaemonSet on Kubernetes
+type: application
+version: 0.1.0
+appVersion: latest
+maintainers:
+  - name: CATIE
+    email: contact@catie.fr
+home: https://github.com/MiguelNdeCarvalho/speedtest-exporter
+sources:
+  - https://github.com/MiguelNdeCarvalho/speedtest-exporter
+keywords:
+  - speedtest
+  - monitoring
+  - network-bandwidth
+  - network-monitoring
