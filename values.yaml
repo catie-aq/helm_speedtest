@@ -18,7 +18,7 @@ env:
   # Duree de mise en cache du resultat entre deux tests reels, evite de saturer
   # la bande passante internet a chaque scrape Prometheus. Valeur en secondes
   # (l'exporter fait un int() dessus, pas de suffixe "m"/"h" accepte).
-  SPEEDTEST_CACHE_FOR: "1800"
+  SPEEDTEST_CACHE_FOR: "14400"
   # SPEEDTEST_SERVER: ""
 
 # Prometheus scrape ce pod automatiquement via le job "kubernetes-pods"
@@ -41,4 +41,5 @@ tolerations: []
 #   operator: "Exists"
 #   effect: "NoSchedule"
 
-nodeSelector: {}
+nodeSelector:
+  kubernetes.io/hostname: athleticantenna
